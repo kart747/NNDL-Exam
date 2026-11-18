@@ -1,0 +1,16 @@
+# virtual environments
+.venv*/
+venv/
+
+# python / jupyter junk
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# downloaded or generated data (recreate with scripts/get_cifar_*.py)
+*.npz
+*.parquet
+*.part
+
+# datasets that are not part of the repo (see README)
+rice_leaf_diseases/
