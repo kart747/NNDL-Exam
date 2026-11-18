@@ -75,7 +75,3 @@ The notebook expects a folder with one sub-folder of images per class. It is not
 `data/Sentimental Analysis.csv` is a sample of the Rotten Tomatoes movie-review polarity data
 (Pang & Lee, 2005), included only so the notebooks run out of the box. It remains subject to its
 original terms.
-
-## License
-
-Code is released under the [MIT License](LICENSE).
