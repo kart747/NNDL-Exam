@@ -1,6 +1,6 @@
 """Download the full CIFAR-10 dataset from Hugging Face (fast mirror of the
 original Toronto release; images stored as lossless PNG) and save it as
-cifar10_full.npz next to this script.
+~/.keras/datasets/cifar10_full.npz.
 
 Arrays match keras.datasets.cifar10.load_data():
 X uint8 (N,32,32,3), y uint8 (N,1).  Load with cifar_local.load_data().
@@ -32,5 +32,6 @@ if __name__ == "__main__":
     X_train, y_train = fetch("train")
     X_test, y_test = fetch("test")
     out = os.path.expanduser("~/.keras/datasets/cifar10_full.npz")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
     np.savez(out, X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test)
     print("saved", out)

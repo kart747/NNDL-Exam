@@ -12,5 +12,7 @@ _PATH = os.path.expanduser("~/.keras/datasets/cifar10_full.npz")
 
 
 def load_data():
+    if not os.path.exists(_PATH):
+        raise FileNotFoundError(f"{_PATH} not found - run scripts/get_cifar_full.py first")
     d = np.load(_PATH)
     return (d["X_train"], d["y_train"]), (d["X_test"], d["y_test"])
